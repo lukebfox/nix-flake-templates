@@ -1,5 +1,9 @@
 # Nix
-result/
+result/**
+
+# Direnv
+.direnv/
+.envrc
 
 # Elixir
 /_build
@@ -12,7 +16,3 @@ erl_crash.dump
 *.beam
 /config/*.secret.exs
 .elixir_ls/
-
-# Direnv
-.direnv/
-.envrc
