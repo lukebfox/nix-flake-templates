@@ -6,3 +6,4 @@ Tiny collection of useful templates for use when developing software intended to
 - [ ] All the rest...
 
 If you want more like this just open an issue for the language/output you want.
+Also, feel free to open up a PR if you have something you want to add. Let's spread the flakes knowledge!
