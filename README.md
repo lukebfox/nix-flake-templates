@@ -17,6 +17,7 @@ myproject
 ├─pyproject.toml
 ├─poetry.lock
 ├─.gitignore
+├─.git
 └─.envrc
 ```
 
