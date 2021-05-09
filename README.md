@@ -29,7 +29,6 @@ $ nix flake show "github:lukebfox/nix-flake-templates"
 github:lukebfox/nix-configs/<commit-hash>
 └───templates
     ├───elixir-environment: template: Elixir development environment
-    ├───haskell-cabal2nix: template: A Haskell executable built with cabal2nix
     ├───infrastructure: template: An infrastructure repository
     ├───python-poetry2nix: template: A Python project built with poetry2nix
     ├───rust-cargo2nix: template: Cargo crate built with cargo2nix
