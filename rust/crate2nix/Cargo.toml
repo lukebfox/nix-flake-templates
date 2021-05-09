@@ -1,0 +1,8 @@
+[package]
+name = "crate-name"
+version = "0.1.0"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+edition = "2018"
+
+[dependencies]

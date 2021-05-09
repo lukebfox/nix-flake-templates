@@ -1,11 +1,13 @@
 {
-  description = "Nix Flake Template | Elixir";
+  description = "Elixir development environment.";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-  inputs.utils.url   = "github:numtide/flake-utils";
+  inputs = {
+    nixpkgs     = { url = "github:NixOS/nixpkgs/nixpkgs-unstable"; };
+    flake-utils = { url = "github:numtide/flake-utils"; };
+  };
 
-  outputs = { self, nixpkgs, utils, ... }: utils.lib.eachDefaultSystem (system:
-    let
+  outputs = { self, nixpkgs, flake-utils, ... }:
+    flake-utils.lib.eachDefaultSystem (system: let
       inherit (nixpkgs.lib) optional;
       pkgs = import nixpkgs { inherit system; };
 
@@ -14,11 +16,11 @@
       # Dead simple
       elixir = pkgs.beam.packages.erlang.elixir;
 
-      ## Select an intepreter based on a specific and/or overridden ErlangVM.
+      ## Select an intepreter based on a specific and/or overridden ErlangVM from nixpkgs.
       #erlangR21_noHipe = erlangR21.override { enableHipe = false; };
       #elixir = (beam.packagesWith erlangR21_noHipe).elixir_1_7;
 
-      ## Get the interpreter source from git master, not nixpkgs.
+      ## Get the interpreter source from git.
       #elixir = (beam.packagesWith erlangR21_noHipe).elixir.override {
       #  version = "1.8.0-dev";
       #  rev = "eb069dd43ba98958f4161b070d111f952b1c656c";
