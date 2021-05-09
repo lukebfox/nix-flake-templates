@@ -44,5 +44,5 @@ If you want more like this feel free to open up an issue or a PR. Let's spread t
 
 ---
 ##### More like this
-nixos/templates
-serokell/templates
+[nixos/templates](https://github.com/nixos/templates)
+[serokell/templates](https://github.com/serokell/templates)
